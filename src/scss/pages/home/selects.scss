@@ -1,0 +1,57 @@
+.ge-selects {
+    background: $color-white ;
+    @include rem(padding, 60px 20px);
+
+    & .container {
+        display: flex;
+        justify-content: space-between;
+
+        @include mq('sm', 'max') {
+            flex-direction: column;
+        }
+    }
+
+    &__box-select {
+        @include rem(max-width, 260px);
+
+        @include mq('sm', 'max') {
+            @include rem(margin-bottom, 50px);
+        }
+
+        & img {
+            width: auto;
+            @include rem(height, 62px);
+            @include rem(margin-bottom, 10px);
+        }
+
+        & p {
+            color: $color-gray-text;
+            line-height: $font-height;
+            @include rem(margin-bottom, 20px);
+
+        }
+
+        & select {
+            appearance: none;
+            background: calc(100% - 14px) 50%/16px auto no-repeat;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDE4IDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTcuNDIwMiAwTDkuMDAwNDEgNy44ODczM0wwLjU4MDY3MiAwTDAgMC41Njg2NjRMOS4wMDA0MSA5TDE4IDAuNTY4NjY0TDE3LjQyMDIgMFoiIGZpbGw9IiNBOEE4QTgiLz4KPC9zdmc+Cg==');
+            width: 90%;
+            padding: 10px 18px;
+            border-radius: 19px;
+            border: 1px solid $color-gray-lighten;
+            color: $color-gray-lighten;
+            font-size: $font-size-text;
+            cursor: pointer;
+
+            &:active,
+            &:focus {
+                outline: none;
+            }
+        }
+
+    }
+
+    &__image-flip {
+        transform: scaleX(-1);
+    }
+}

@@ -1,0 +1,60 @@
+
+html {
+    @include rem-baseline;
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* stop WebKit and Windows mobile changing text size */
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+
+    background-color: $color-white;
+    font-family: $font-main;
+    background: $color-gray-light;
+    
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    @include reset-box-model;
+}
+
+a {
+    @include reset-link;
+}
+
+ul,
+ol {
+    @include reset-list;
+}
+
+img {
+    @include reset-media;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+

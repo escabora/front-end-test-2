@@ -1,0 +1,19 @@
+.ge-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include rem(padding, 57px);
+    z-index: 10;
+
+    @include mq('md', 'max') {
+        @include rem(padding, 35px);
+    }
+
+    &__logo {
+        & svg {
+            @include rem(width, 209px);
+            @include rem(height, 30px);
+        }
+    }
+}

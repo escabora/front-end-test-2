@@ -1,0 +1,60 @@
+/**
+ * General Variables
+ * Call on every SASS files
+ */
+
+// General
+$font-size-text: 14px;
+$font-size-title: 20px;
+$font-size-title-big: 70px;
+$font-height: 22px;
+$font-height-big: 85px;
+
+// Containers
+$container-width: 900px !default;
+
+/**
+ * Typography
+ */
+$font-main: "Montserrat", sans-serif;
+
+/**
+  * Font Weight
+  */
+$weights: (
+  normal: 400,
+  bold: 700,
+);
+
+/**
+ * Screen Sizes
+ */
+$screen-xs: 425px !default;
+$screen-sm: 768px !default;
+$screen-md: 1024px !default;
+$screen-lg: 1200px !default;
+
+/**
+ * Breakpoints - Media Queries
+ */
+$breakpoints: (
+  "xs": $screen-xs,
+  "sm": $screen-sm,
+  "md": $screen-md,
+  "lg": $screen-lg,
+);
+
+/**
+ * Colors
+ */
+$color-white: #fff;
+$color-gray-lighten: #a8a8a8;
+$color-gray-light: #f2f2f2;
+$color-gray: #313135;
+$color-gray-not-found: #a9a9a9;
+$color-black: #000;
+$color-gray-text: #848484;
+$bg-banner: #75bc97;
+$green-title: #0c261c;
+$card-green-title: #1e6b4e;
+$color-green-dark: #196146;

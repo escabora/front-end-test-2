@@ -1,0 +1,35 @@
+
+block vars
+
+doctype
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="description", content="")
+
+        link(rel="icon", href="")
+        link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet")
+        block seo
+
+        block styles
+            link(rel='stylesheet', href='../scss/index.scss', media='all')/
+
+        block headScripts
+
+    body
+        include ./svgs.pug
+        
+        header(class='ge-header')
+            div(class='container')
+                a(href="/" class='ge-header__logo')
+                    svg
+                        use(xlink:href='#logo-white')
+                    h3(class='hidden-heading') Green Thumb
+
+        main(role='main', class=`ge-main`)
+            block content
+        
+        block scripts
+            script(type='text/javascript', src='../js/index.js')

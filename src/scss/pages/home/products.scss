@@ -1,0 +1,318 @@
+.ge {
+    &-products {
+        &__not-found {
+            @include rem(padding, 50px 20px);
+            
+            @include mq('sm', 'max') {
+                @include rem(padding, 50px 35px);
+            }
+            
+            & .container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                @include mq('sm', 'max') {
+                    flex-direction: column;
+                }
+                
+                & > div {
+                    width: 50%;
+
+                    @include mq('sm', 'max') {
+                        width: 100%;
+                        @include rem(margin-bottom, 30px);
+                    }
+
+                    & h2 {
+                        @include rem(font-size, 45px);
+                        @include rem(line-height, 54,86px);
+                        @include font-weight(bold);
+                        @include rem(margin-bottom, 15px);
+                        color: $color-gray-not-found;
+                    }
+                    
+                    & p {
+                        @include rem(font-size, 16px);
+                        @include rem(line-height, 27px);
+                        @include rem(max-width, 219px);
+                        color: $color-gray-not-found;
+
+                    }
+
+                    & img {
+                        display: flex;
+                        margin: 0 auto;
+                        @include rem(width, 104.7px);
+                        @include rem(height, 203.27px);
+                    }
+                }  
+            }
+        }
+
+        &__grid {
+            display: grid;
+            grid-template:
+                "ge-product-card--feature ge-product-card--feature ge-product-card--1 ge-product-card--2" 245px
+                "ge-product-card--feature ge-product-card--feature ge-product-card--3 ge-product-card--4" 245px / 23.3% 23.3% 23.3% 23.3%;
+            
+            grid-auto-rows: auto;
+            @include rem(gap, 20px);
+
+
+            @include mq('sm', 'max') {
+                display: inline-flex;
+                overflow-x: scroll;
+            }
+        }
+
+        &__result {
+            @include rem(padding, 50px 20px);
+
+            &-title {
+                & img {
+                    @include rem(width, 158px);
+                    @include rem(height, 78px);
+                    @include rem(margin-bottom, 20px);
+                }
+
+                & h2 {
+                    color: $green-title;
+                    @include rem(font-size, 55px);
+                    @include rem(line-height, 67,05px);
+                    @include font-weight(bold);
+                    @include rem(margin-bottom, 54px);
+                }
+            }
+        }
+
+        &__back-to-top {
+            & a {
+                display: flex;
+                width: 100%;
+                position: relative;
+                @include rem(margin-top, 50px);
+                border: 1px solid $color-green-dark;
+                @include rem(border-radius, 50px);
+                align-items: center;
+                justify-content: center;
+                @include rem(padding, 15px);
+                transition: all 0.3s ease-in-out;
+                
+
+                & svg {
+                    @include rem(width, 20px);
+                    @include rem(height, 20px);
+                    @include rem(margin-right, 10px);
+                }
+
+                & span {
+                    color:  $color-green-dark;
+                    @include rem(font-size, 16px);
+                }
+
+                &:hover {
+                    background-color: $bg-banner;
+
+                }
+            }
+        }
+    }
+ 
+    &-product-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: $color-white;
+        flex-direction: column;
+        box-sizing: border-box;
+        justify-content: space-between;
+        box-shadow: 0px 28px 38px #00000000;
+        @include rem(border-radius, 5px);
+
+        @include mq('sm', 'max') {
+            @include rem(width, 258px);
+        }
+    
+
+
+        &__image {
+            display: flex;
+            @include rem(height, 150px);
+            width: 100%;
+            overflow: hidden;
+
+            @include mq('sm', 'max') {
+                @include rem(height, 210px);
+                @include rem(width, 258px);
+            }
+            & img {
+                display: flex;
+                width: auto;
+                margin: 0 auto;
+            }
+        }
+
+        &__description {
+            @include rem(padding, 20px);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            & > div {
+                
+                &:nth-child(2) {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    align-items: center;
+                }
+            }
+            
+        }
+
+        &__status {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            @include rem(max-width, 65px);
+
+            & svg {
+                @include rem(height, 17px);
+                @include rem(width, 19px);
+                
+            }
+        }
+
+        &__name {
+            color: $card-green-title;
+            font-size: $font-size-text;
+            @include rem(line-height, 28px);
+            @include font-weight(bold);
+
+            @include mq('sm', 'max') {
+                @include rem(font-size, 16px);
+            }
+        }
+
+        &__price {
+            color: $card-green-title;
+            font-size: $font-size-text;
+            @include rem(line-height, 28px);
+            @include font-weight(bold);
+            text-decoration: none;
+
+            @include mq('sm', 'max') {
+                @include rem(font-size, 16px);
+            }
+        }
+
+        &__flag {
+            background: $bg-banner;
+            position: absolute;
+            @include rem(padding, 6px 26px);
+            @include rem(padding-left, 10px);
+            box-shadow: 0px 10px 28px #0000002e;
+            @include rem(border-top-right-radius, 20px);
+            @include rem(border-bottom-right-radius, 20px);
+            left: 0;
+            @include rem(top, 30px);
+            color: $color-white;
+            font-size: $font-size-text;
+            @include font-weight(bold);
+        }
+
+        &--feature {
+            grid-area: ge-product-card--feature;
+
+            & .ge-product-card__flag {
+
+                @include mq('sm', 'min') {
+                    @include rem(padding-left, 26px);
+                }
+            }
+
+            & .ge-product-card__image {
+                
+                @include mq('sm', 'min') {
+                    @include rem(height, 390px);
+                }
+            }
+
+            & .ge-product-card__description {
+               
+                @include mq('sm', 'min') {
+                    @include rem(padding, 28px);
+                    flex-direction: row;
+                }
+
+                & > div {
+                   
+                    @include mq('sm', 'min') {
+                        width: 50%;
+                    }
+                    
+                    .ge-product-card__name {
+                        
+                        @include mq('sm', 'min') {
+                            @include rem(font-size, 35px);
+                            @include rem(line-height, 37px);
+                            @include rem(max-width, 190px);
+                        }
+                    }
+
+                    .ge-product-card__price {
+                        
+                        @include mq('sm', 'min') {
+                            @include rem(font-size, 24px);
+                        }
+                    }
+
+                    .ge-product-card__status {
+                        
+
+                        @include mq('sm', 'min') {
+                            @include rem(max-width, 90px);
+                            @include rem(margin-top, 10px);
+                        }
+
+                        & svg {
+                            
+                            @include mq('sm', 'min') {
+                                @include rem(height, 24px);
+                                @include rem(width, 25px);
+                            }
+                            
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        @include mq('sm', 'min') {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                        }
+                        
+                    }
+                }
+            }
+        }
+
+        &--1 {
+            grid-area: ge-product-card--1;
+        }
+
+        &--2 {
+            grid-area: ge-product-card--2; 
+        }
+
+        &--3 {
+            grid-area: ge-product-card--3;
+        }
+
+        &--4 {
+            grid-area: ge-product-card--3;
+        }
+    }
+}

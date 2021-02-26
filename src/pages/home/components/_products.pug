@@ -1,0 +1,22 @@
+section(class='ge-products')
+    div(class='ge-products__not-found js--not-found is--hide')
+        div(class='container')
+            div
+                h2 No results yet…
+                p Use the filters above to find the plant that best fits your environment :)
+            div
+                img(src="../images/illustrations/no-results.png" alt='No Result')
+
+    div(class='ge-products__result js--content-result is--hide')
+        div(class='container')
+            div(class='ge-products__result-title')
+                img(src="../images/illustrations/pick.png" alt='Pick')
+                h2 Our picks for you
+
+            div(class='container ge-products__grid js--result')
+        
+            div(class='ge-products__back-to-top')
+                a(href='#banner-top')
+                    svg
+                        use(xlink:href='#arrow-up')
+                    span back to the top

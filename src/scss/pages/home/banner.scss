@@ -1,0 +1,121 @@
+.ge-banner {
+  display: flex;
+  height: 34.5vw;
+  overflow: hidden;
+  background: $bg-banner;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  @include mq("md", "max") {
+    height: 60vw;
+  }
+  
+  @include mq("sm", "max") {
+    height: 180vw;
+  }
+
+
+  & img {
+    &:nth-child(1) {
+      width: auto;
+      max-width: none;
+      height: auto;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &:nth-child(2) {
+      position: absolute;
+      height: auto;
+      width: 21%;
+      left: 50%;
+      top: 50%;
+      transform: translate(29%, -50%);
+      z-index: 0;
+    }
+
+    &:nth-child(3) {
+      position: absolute;
+      height: 100%;
+      width: auto;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    &:nth-child(4) {
+      position: absolute;
+      height: auto;
+      width: 100%;
+      top: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    &:nth-child(5) {
+      position: absolute;
+      height: auto;
+      width: 80%;
+      top: 50%;
+      right: 50%;
+      z-index: 0;
+      transform: translate(50%, 25%);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    z-index: 1;
+    @include rem(max-width, 480px);
+    @include rem(line-height, 78px);
+
+    @include mq("md", "max") {
+      top: 10%;
+      @include rem(padding, 35px);
+      @include rem(max-width, 350px);
+    }
+
+    & h2 {
+      font-size: $font-size-title-big;
+      @include font-weight(bold);
+      color: $color-white;
+      line-height: $font-height-big;
+
+      @include mq("md", "max") {
+        @include rem(font-size, 40px);
+        @include rem(line-height, 48px);
+      }
+    }
+
+    & a {
+      display: flex;
+      position: relative;
+      @include rem(width, 50px);
+      @include rem(margin-top, 40px);
+    }
+
+    & svg {
+      @include rem(width, 46px);
+      @include rem(height, 46px);
+
+      animation: slideDown 1.3s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes slideDown {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10px);
+  }
+}

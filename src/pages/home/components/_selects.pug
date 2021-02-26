@@ -1,0 +1,33 @@
+section(class='ge-selects' id='select-plants')
+    div(class='container')
+        div(class='ge-selects__box-select')
+            img(src='../images/illustrations/sun.png', alt='Sun')
+            p 1. Set the amount of 
+                strong sunlight 
+                |  your plant will get.
+            select(class='js--select')
+                option(value='Select...' selected disabled hidden) Select...
+                option(value='no') No
+                option(value='low') Low
+                option(value='high') High
+        
+        div(class='ge-selects__box-select')
+            img(src='../images/illustrations/wateringcan.png', class='ge-selects__image-flip' alt='Wateringcan')
+            p 2. How often do you want to 
+                strong water 
+                |  your plant?
+            select(class='js--select')
+                option(value='Select...' selected disabled hidden) Select...
+                option(value='regularly') Regularly
+                option(value='daily') Daily
+                option(value='rarely') Rarely
+        
+        div(class='ge-selects__box-select')
+            img(src='../images/illustrations/dog.png', alt='Dog')
+            p 3. Do you have pets? Do they 
+                strong chew 
+                |  plants? 
+            select(class='js--select')
+                option(value='Select...' selected disabled hidden) Select...
+                option(value='true') True
+                option(value='false') False
